@@ -1,3 +1,15 @@
+//slider
+let items = document.querySelectorAll('.slider .item');
+let currentItem = 0;
+let isEnabled = true;
+
+function changeCurrentItem (n){
+    currentItem = (n + items.length) % items.length;
+}
+
+
+
+
 
 //scroll navigation
 const navScroll = (event) => {
