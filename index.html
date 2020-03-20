@@ -14,18 +14,18 @@
             
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#slider" class="active" id="sliderNav">Home</a></li>
+                    <li><a href="#services" id="servicesNav">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#aboutUs">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
 
-        <div class="slider">
+        <div class="slider" id="slider">
             <div class="wrapper">
                 <div class="container">
                     <div class="chevLeft">
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="ourServices">
+        <div class="ourServices" id="services">
             <div class="container">
                 <h2>Our Services</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -83,36 +83,36 @@
             </div>
         </div>
 		
-		<div class="portfolio">
+		<div class="portfolio" id="portfolio">
             <div class="container">
                 <h2>Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                <ul>
+                <ul class="portfolioSwitch">
                     <li class="active">All</li>
                     <li>Web Design</li>
                     <li>Graphic Design</li>
                     <li>Artwork</li>
                 </ul>
                 <div class="grid">
-                    <img src="assets/Portfolio/1.jpg"  alt="1">
-                    <img src="assets/Portfolio/2.jpg"  alt="2">
-                    <img src="assets/Portfolio/3.jpg"  alt="3">
-                    <img src="assets/Portfolio/4.jpg"  alt="4">
-                    <img src="assets/Portfolio/5.jpg"  alt="5">
-                    <img src="assets/Portfolio/6.jpg"  alt="6">
-                    <img src="assets/Portfolio/7.jpg"  alt="7">
-                    <img src="assets/Portfolio/8.jpg"  alt="8">
-                    <img src="assets/Portfolio/9.jpg"  alt="9">
-                    <img src="assets/Portfolio/10.jpg"  alt="10">
-                    <img src="assets/Portfolio/11.jpg"  alt="11">
-                    <img src="assets/Portfolio/12.jpg"  alt="12">
-                    <img src="assets/Portfolio/12.jpg"  alt="12">
-                    <img src="assets/Portfolio/12.jpg"  alt="12">
+                    <img src="assets/Portfolio/1.jpg" class="box"  alt="1">
+                    <img src="assets/Portfolio/2.jpg" class="box" alt="2">
+                    <img src="assets/Portfolio/3.jpg" class="box" alt="3">
+                    <img src="assets/Portfolio/4.jpg" class="box" alt="4">
+                    <img src="assets/Portfolio/5.jpg" class="box" alt="5">
+                    <img src="assets/Portfolio/6.jpg" class="box" alt="6">
+                    <img src="assets/Portfolio/7.jpg" class="box" alt="7">
+                    <img src="assets/Portfolio/8.jpg" class="box" alt="8">
+                    <img src="assets/Portfolio/9.jpg" class="box" alt="9">
+                    <img src="assets/Portfolio/10.jpg" class="box" alt="10">
+                    <img src="assets/Portfolio/11.jpg" class="box" alt="11">
+                    <img src="assets/Portfolio/12.jpg" class="box" alt="12">
+                    <img src="assets/Portfolio/12.jpg" class="box" alt="12">
+                    <img src="assets/Portfolio/12.jpg" class="box" alt="12">
                 </div>
             </div>
         </div>
         
-        <div class="aboutUs">
+        <div class="aboutUs" id="aboutUs">
             <div class="container">
                 <h2>About Us</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -155,7 +155,7 @@
             </div>
         </div>
 		
-		<div class="quote">
+		<div class="quote" id="contact">
             <div class="container">
                 <h2>Get a Quote</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -163,11 +163,11 @@
                 <div class="wrapper">
                  
                     <div class="form">
-                     <form action="#">
-                         <input type="text" required placeholder="Name (Required)">
-                         <input type="email" required placeholder="Email (Required)">
-                         <input type="text" placeholder="Subject">
-                         <textarea name="description" id="description" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
+                     <form id="formQuote">
+                         <input type="text" required placeholder="Name (Required)" id="nameQuote">
+                         <input type="email" required placeholder="Email (Required)" id="emailQuote">
+                         <input type="text" placeholder="Subject" id="subjectQuote">
+                         <textarea name="description" id="descriptionQuote" cols="30" rows="10" placeholder="Describe your project in detail..." id="descriptionQuote"></textarea>
                          <input type="submit" value="Submit" class="submit">
                      </form>
                     </div>
@@ -198,7 +198,9 @@
 
             </div>
         </div>
-		
+    </main>        
+        
+
 		<footer>
         <div class="container">
             <div class="copyright">&copy; Copyright 2013</div>
@@ -212,8 +214,15 @@
             </div>
             <div class="clear"></div>
         </div>
-    </footer>
-	
-    </main>
+        </footer>
+        
+        <div class="modal">
+            <div class="modalContent">
+              <p class="modalText">1223412341234134134</p>
+              <button class="confirmBtn" id="confirmBtn">OK</button>
+            </div>
+          </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
