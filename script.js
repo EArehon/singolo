@@ -7,8 +7,50 @@ function changeCurrentItem (n){
     currentItem = (n + items.length) % items.length;
 }
 
+function previusItem(n) {
+    hideItem('toRight');
+    changeCurrentItem(n - 1);
+    showItem('fromLeft');
+}
+
+function nextItem(n) {
+    hideItem('toLeft');
+    changeCurrentItem(n + 1);
+    showItem('fromRight');
+}
 
 
+function hideItem(direction){
+    isEnabled = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener('animationend', function(){
+        this.classList.remove('active', direction);
+    });
+}
+
+function showItem(direction){
+    items[currentItem].classList.add('next', direction);
+    items[currentItem].addEventListener('animationend', function(){
+        this.classList.remove('next', direction);
+        this.classList.add('active');
+        isEnabled = true;
+    });
+}
+
+
+//кнопка слайдера влево
+document.querySelector('.control.left').addEventListener('click', function(){
+    if(isEnabled){
+        previusItem(currentItem);
+    }
+});
+
+//кнопка слайдера вправо
+document.querySelector('.control.right').addEventListener('click', function(){
+    if(isEnabled){
+        nextItem(currentItem);
+    }
+});
 
 
 //scroll navigation
