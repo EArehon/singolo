@@ -86,6 +86,21 @@ const showOutline = (event) => {
 document.querySelector('div.grid').addEventListener('click', showOutline);
 
 
+//работа дисплеев телефонов
+document.querySelectorAll('.phone').forEach(element => {
+    element.addEventListener('click', (event) => {
+        
+        let screen = element.nextElementSibling;
+    
+        if (screen.classList.contains('active')){
+            screen.classList.remove('active');
+        }
+        else{
+            screen.classList.add('active');
+        }
+    })
+})
+
 
 //переключение тегов портфолио
 const portfolioSwitch = (event) =>{

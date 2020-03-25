@@ -241,6 +241,37 @@ main .slider .container{
     left: 123px;
 }
 
+
+
+
+
+.displayVer{
+    position: absolute;
+    z-index: 10;
+    top: 65px;
+    left: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.displayHor{
+    position: absolute;
+    z-index: 10;
+    top: 14px;
+    left: 60px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.active{
+    opacity: 1;
+}
+
+
+
+
+
+
 .ourServices{
     background-color: #f2f2f2;
     width: 940px;
